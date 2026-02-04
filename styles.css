@@ -1,0 +1,128 @@
+:root {
+    /* Brand Colors */
+    --primary-pink: #ff4d91;
+    --secondary-purple: #7b2cbf;
+    --accent-light-pink: #ff85b3;
+    --deep-purple: #3c096c;
+    
+    /* Neutral Palette */
+    --white: #ffffff;
+    --off-white: #f8f9fa;
+    --text-dark: #2d0a31;
+    --text-muted: #664d6b;
+    
+    /* Spacing & Misc */
+    --container-width: 1100px;
+    --transition: all 0.3s ease;
+    --border-radius: 16px;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--off-white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header & Navigation */
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    background: linear-gradient(45deg, var(--primary-pink), var(--secondary-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at top left, #fff0f6, #f3e8ff);
+    position: relative;
+    padding: 4rem 0;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--deep-purple);
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    color: var(--primary-pink);
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-accent {
+    width: 60px;
+    height: 6px;
+    background: linear-gradient(to right, var(--primary-pink), var(--secondary-purple));
+    margin: 2rem auto;
+    border-radius: 3px;
+}
+
+/* Content Area */
+.vision {
+    padding: 6rem 0;
+}
+
+.content-card {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px rgba(123, 44, 191, 0.1);
+    border-top: 5px solid var(--secondary-purple);
+}
+
+.content-card h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-purple);
+}
+
+.content-card p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+/* Footer */
+footer {
